@@ -62,6 +62,10 @@ h1{
     cursor: pointer;
 }
 
+.abc{
+    font-size: 12px;
+}
+
 .win-msg-container{
     margin: 1vmin auto;
 }
