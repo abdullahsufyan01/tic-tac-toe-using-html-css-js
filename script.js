@@ -56,5 +56,21 @@ const showWinMsg = (winner)=> {
     disableButtons();
 }
 
+const checkWinner = () => {
+    for (const pattern of winPatterns) {
+
+        let pos1Val = boxes[pattern[0]].innerText;
+        let pos2Val = boxes[pattern[1]].innerText;
+        let pos3Val = boxes[pattern[2]].innerText;
+
+        if (pos1Val != "" && pos2Val != "" && pos3Val != "") {
+            if (pos1Val === pos2Val && pos2Val === pos3Val & pos1Val === pos3Val){
+                boxes.disabled=true;
+                showWinMsg(pos1Val)
+            }
+        }
+    }
+}
+
 resetBtn.addEventListener("click",resetGame);
 newGameBtn.addEventListener("click",resetGame);
